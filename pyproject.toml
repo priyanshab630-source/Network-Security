@@ -5,7 +5,17 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "certifi>=2026.10.23",
     "numpy>=2.4.6",
     "pandas>=3.1.1",
+    "pymongo>=4.20.0",
     "python-dotenv>=1.2.4",
 ]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["network_security*"]
